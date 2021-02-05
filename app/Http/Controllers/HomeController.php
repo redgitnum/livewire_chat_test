@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\ShotEvent;
+use App\Events\SendPost;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        event(new ShotEvent);
         return view('welcome');
     }
 
@@ -17,4 +17,6 @@ class HomeController extends Controller
     {
         return view('admin');
     }
+
+    
 }
